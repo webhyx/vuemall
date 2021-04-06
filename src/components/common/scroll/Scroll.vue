@@ -50,6 +50,8 @@ export default {
       if(this.probeType === 2 || this.probeType === 3){
         this.scroll.on('scroll', (position) => {
         //  console.log(position);
+        // 当监听到位置时，就会触发scroll绑定的事件contentScoll
+        // 只传递一个参数时就是绑定的事件名，第二个参数就是作为事件的参数的值
         this.$emit('scroll', position)
       })
       }

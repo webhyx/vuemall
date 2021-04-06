@@ -1,5 +1,5 @@
 export function debounce(func,delay){
-  /* 防抖函数 */
+  /* 防抖函数 闭包原理 这里的timer会被保存起来的*/
   let timer = null;
   return function(...args) {
     if (timer) clearTimeout(timer)

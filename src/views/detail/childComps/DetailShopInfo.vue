@@ -60,6 +60,7 @@ export default {
 <style> 
   .shop-info {
     padding: 5px;
+    border-bottom: 6px solid #eee ;
   }
   .shop-info img {
     width: 45px;

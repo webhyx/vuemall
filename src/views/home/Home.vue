@@ -167,6 +167,7 @@ export default {
 
     /* 网络请求相关 */
     getHomeMultidata() {
+      // home.js中网络请求的同名函数，返回一个promise
       getHomeMultidata().then((res) => {
         console.log(res);
         this.banners = res.data.banner.list;

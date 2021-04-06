@@ -6,7 +6,8 @@ import {
 export default{
   // mutations 有跟踪的功能
     // mutations唯一的目的就是修改state中状态
-    // mutations中的每一个方法尽可能完成的事件比较单一一点
+    // mutations中的每一个方法尽可能完成的事件比较单一一点,完成的尽量是简单的操作，如加1，push等
+    
     [ADD_COUNTER](state,payload){
       payload.count++
     },

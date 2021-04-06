@@ -72,6 +72,7 @@ export default {
     line-height: 40px;
     /* better-scroll不起效果时用的： */
     /* bottom: 40px;  */
+    justify-content: space-around;
   }
 
   .check-content {

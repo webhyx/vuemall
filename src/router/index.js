@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
+// 路由的懒加载:
 const Home = () => import('../views/home/Home')
 const Category = () => import('../views/category/Category')
 const Cart = () => import('../views/cart/Cart')
@@ -10,7 +11,7 @@ const Detail = () => import('../views/detail/Detail')
 // 1.安装插件
 Vue.use(VueRouter)
 
-// 2.创建router
+// 2.创建router,也就是定义routes对象数组 
 const routes = [
   {
     path: '',

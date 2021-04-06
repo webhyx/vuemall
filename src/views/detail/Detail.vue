@@ -82,7 +82,7 @@ export default {
       //1.获取顶部的图片轮播图数据
       console.log(res);
       const data = res.result;
-      //1.去除轮播图数据
+      //1.轮播图数据
       this.topImage = data.itemInfo.topImages;
       //2.获取商品信息
       this.goods = new Goods(data.itemInfo,data.columns,data.shopInfo.services);
@@ -101,7 +101,8 @@ export default {
     getRecommend().then(res => {
       this.recommends = res.data.list
     })
-    //4.给getThemeTopY赋值(赋值防抖)
+    //4.给getThemeTopY赋值(赋值防抖),保存位置高度
+    // $el 指向当前组件template模板中的根标签
     this.themeTopY = debounce(() => {
       this.themeTopYs = []
       this.themeTopYs.push(0),
@@ -115,6 +116,7 @@ export default {
     
   },
   destroyed() {
+    // 函数
     this.$bus.$off('itemImgLoad', this.itemImgListener)
   },
   methods: {
@@ -168,7 +170,7 @@ export default {
       //   console.log(res);
       // })
 
-      // 使用映射
+      // 使用vuex的映射(相当于直接调用本组件的方法)和promise,可以知道调用成功之后返回的信息
       this.addCart(product).then(res => {
         this.show = true;
         this.message = res;

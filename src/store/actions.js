@@ -6,6 +6,7 @@ import {
 
 export default {
   addCart(context,payload){
+    
     return new Promise((resolve,reject) => {
       // 查找之前数组中是否有该商品
     // 方法2
@@ -30,4 +31,7 @@ export default {
     // }
     })
   }
-}
+
+} 
+
+
